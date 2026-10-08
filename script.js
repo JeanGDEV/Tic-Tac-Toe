@@ -25,3 +25,16 @@ const gameBoard = (function(){
     }
 })()
 
+// Setting up the player names and markers
+const createPlayer = function (name, marker) {
+    return {
+        name,
+        marker,
+        getName: function(){
+            return name
+        },
+        getMarker: function(){
+            return marker
+        }
+    }
+}
