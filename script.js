@@ -38,3 +38,12 @@ const createPlayer = function (name, marker) {
         }
     }
 }
+
+const gameController = (function(){
+    const player1 = createPlayer("Jean", "X")
+    const player2 = createPlayer("John", "O")
+    let currentPlayer = player1
+
+    let gameOver = false
+})()
+
