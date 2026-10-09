@@ -51,8 +51,11 @@ const gameController = (function(){
     let currentPlayer = player1
 
     let gameOver = false
+
+    if(gameOver) return false
 })()
 
+// Functions used in gameController()
 function checkWinner(){
     let board = gameBoard.displayBoard()
     let winner = null
