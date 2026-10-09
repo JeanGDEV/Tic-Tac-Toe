@@ -52,7 +52,9 @@ const gameController = (function(){
 
     let gameOver = false
 
-    if(gameOver) return false
+    function playTurn(index) {
+        if (gameOver) return false
+    }
 })()
 
 // Functions used in gameController()
