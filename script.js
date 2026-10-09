@@ -101,11 +101,7 @@ const gameController = (function(){
     
     return {
         playTurn,
-        resetGame,
-        checkWinner,
-        checkTie,
-        switchTurn,
-        endGame
+        resetGame
     }
 })()
 
