@@ -49,6 +49,7 @@ const gameController = (function(){
     const player1 = createPlayer("Jean", "X")
     const player2 = createPlayer("John", "O")
     let currentPlayer = player1
+    let gameWinner = null
 
     let gameOver = false
 
@@ -58,7 +59,7 @@ const gameController = (function(){
         // Check if it's there an empty square
         if (!gameBoard.placeMark(index, currentPlayer.marker)) return false
 
-        }
+    }
 })()
 
 // Functions used in gameController()
@@ -86,4 +87,9 @@ function switchTurn(){
     } else {
         currentPlayer = player1
     }
+}
+
+function endGame(winner) {
+    gameOver = true
+    gameWinner = winner
 }
