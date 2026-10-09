@@ -101,7 +101,10 @@ const gameController = (function(){
     
     return {
         playTurn,
-        resetGame
+        resetGame,
+        getCurrentPlayer: () => currentPlayer,
+        getGameOver: () => gameOver,
+        getWinner: () => gameWinner
     }
 })()
 
