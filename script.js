@@ -91,6 +91,13 @@ const gameController = (function(){
         if (!gameBoard.placeMark(index, currentPlayer.marker)) return false
     }
     
+    return {
+        playTurn,
+        checkWinner,
+        checkTie,
+        switchTurn,
+        endGame
+    }
 })()
 
 
