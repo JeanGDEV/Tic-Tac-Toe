@@ -53,8 +53,12 @@ const gameController = (function(){
     let gameOver = false
 
     function playTurn(index) {
+
         if (gameOver) return false
-    }
+        // Check if it's there an empty square
+        if (!gameBoard.placeMark(index, currentPlayer.marker)) return false
+
+        }
 })()
 
 // Functions used in gameController()
