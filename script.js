@@ -52,3 +52,29 @@ const gameController = (function(){
 
     let gameOver = false
 })()
+
+function checkWinner(){
+    let board = gameBoard.displayBoard()
+    let winner = null
+    for(const combo of winningCombos){
+        const [a, b, c] = combo
+        if (board[a] !== "" && board[a] === board[b] && board[a] === board[c]) {
+            winner = board[a]
+            break
+        }
+    }
+    return winner
+}
+
+function checkTie(){
+    const board = gameBoard.displayBoard()
+    return (!board.includes(""))
+}
+
+function switchTurn(){
+    if (currentPlayer === player1) {
+        currentPlayer = player2
+    } else {
+        currentPlayer = player1
+    }
+}
