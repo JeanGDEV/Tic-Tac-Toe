@@ -97,14 +97,24 @@ const gameController = (function(){
         if (gameOver) return false
         // Check if it's there an empty square
         if (!gameBoard.placeMark(index, currentPlayer.marker)) return false
+
+        const winner = checkWinner()
+        if(winner){
+            endGame(winner)
+        } else if (checkTie()){
+            endGame(null)
+        } else {
+            switchTurn()
+        }
+        return true
     }
     
     return {
         playTurn,
         resetGame,
-        getCurrentPlayer: () => currentPlayer,
-        getGameOver: () => gameOver,
-        getWinner: () => gameWinner
+        getCurrentPlayer: function() {return currentPlayer},
+        getGameOver: function() {return gameOver},
+        getWinner: function() {return gameWinner}
     }
 })()
 
