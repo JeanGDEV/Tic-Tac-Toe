@@ -83,6 +83,14 @@ const gameController = (function(){
         gameOver = true
         gameWinner = winner
     }
+
+    function resetGame() {
+        gameBoard.resetBoard()
+        currentPlayer = player1
+        gameOver = false
+        gameWinner = null
+
+    }
     
     function playTurn(index) {
 
@@ -93,6 +101,7 @@ const gameController = (function(){
     
     return {
         playTurn,
+        resetGame,
         checkWinner,
         checkTie,
         switchTurn,
