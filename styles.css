@@ -11,3 +11,9 @@ body {
     align-items: center;
     font-family: sans-serif;
 }
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
