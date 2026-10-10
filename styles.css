@@ -66,3 +66,13 @@ button {
     border: none;
     cursor: pointer;
 }
+
+.game-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#next-turn, #show-winner {
+    font-size: 1.6rem;
+}
