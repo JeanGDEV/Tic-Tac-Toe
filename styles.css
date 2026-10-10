@@ -26,16 +26,22 @@ body {
 }
 
 .player {
+    width: 100px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
 }
 
-.player > p {
+.player > label {
     font-size: 1.5rem;
 }
 
-.player > span {
+.player > input {
+    text-align: center;
     font-size: 1.4rem;
     font-weight: bold;
+    border: none;
+    border-bottom: 2px solid black;
 }
 
 .gameboard {
