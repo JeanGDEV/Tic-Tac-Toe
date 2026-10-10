@@ -51,3 +51,12 @@ body {
     justify-content: center;
     align-items: center;
 }
+
+button {
+    font-size: 1.4rem;
+    padding: 5px 10px;
+    width: 100px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+}
