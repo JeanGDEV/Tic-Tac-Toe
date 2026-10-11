@@ -2,6 +2,11 @@ const squares = document.querySelectorAll(".square")
 const turnDisplay = document.querySelector("#next-turn")
 const winnerDisplay = document.querySelector("#show-winner")
 
+const firstPlayerName = window.prompt("Player's 1 name")
+const secondPlayerName = window.prompt("Player's 2 name")
+
+
+
 //BUTTONS
 const restartBtn = document.querySelector("#restart-btn")
 
@@ -54,8 +59,8 @@ const createPlayer = function (name, marker) {
 }
 
 const gameController = (function(){
-    const player1 = createPlayer("Jean", "X")
-    const player2 = createPlayer("John", "O")
+    const player1 = createPlayer(firstPlayerName, "X")
+    const player2 = createPlayer(secondPlayerName, "O")
     let currentPlayer = player1
     let gameWinner = null
 
