@@ -149,3 +149,20 @@ function renderWinner(){
         winnerDisplay.textContent = ""
     }
 }
+
+function renderAll(){
+    renderBoard()
+    renderTurn()
+    renderWinner()
+}
+
+squares.forEach((square) => {
+    square.addEventListener("click", (event) => {
+        let index = Number(event.currentTarget.dataset.index)
+        let playTurn = gameController.playTurn(index)
+
+        if(playTurn){
+            renderAll()
+        }
+    })
+})
