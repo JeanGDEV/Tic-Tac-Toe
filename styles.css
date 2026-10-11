@@ -43,6 +43,13 @@ h1 {
     grid-template-columns: repeat(3, 150px);
     grid-template-rows: repeat(3, 150px);
     gap: var(--gap-container);
+    background: white;
+    animation: glow-board 3s infinite alternate;
+}
+
+@keyframes glow-board {
+    from{box-shadow: 0 0 10px rgba(255, 255, 255, 0.63);}
+    to{box-shadow: 0 0 30px rgba(255, 255, 255, 0.486);}
 }
 
 .square {
