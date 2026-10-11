@@ -57,8 +57,9 @@ const createPlayer = function (name, marker) {
 }
 
 const gameController = (function(){
-    const player1 = createPlayer(firstPlayerName, "X")
-    const player2 = createPlayer(secondPlayerName, "O")
+    let player1 = createPlayer(firstPlayerName, "X")
+    let player2 = createPlayer(secondPlayerName, "O")
+    checkNamePlayer(player1, player2)
     let currentPlayer = player1
     let gameWinner = null
 
@@ -161,13 +162,13 @@ function renderAll(){
     renderBoard()
     renderTurn()
     renderWinner()
+
 }
 
 squares.forEach((square) => {
     square.addEventListener("click", (event) => {
         let index = Number(event.currentTarget.dataset.index)
         let playTurn = gameController.playTurn(index)
-
         if(playTurn){
             renderAll()
         }
@@ -180,5 +181,18 @@ restartBtn.addEventListener("click", () => {
     gameController.resetGame()
     renderAll()
 })
+
+function checkNamePlayer(player1, player2){
+    // Here we ensure if the prompt is empty
+    // so we give them a default name for both
+
+    if(player1.name === null || player1.name === "") {
+        player1.name = "John"
+    }
+
+    if(player2.name === null || player2.name === ""){
+        player2.name = "Doe"
+    } 
+}
 
 renderAll()
