@@ -1,3 +1,5 @@
+const squares = document.querySelectorAll(".square")
+
 const winningCombos = [
     [0, 1, 2], [3, 4, 5], [6, 7, 8], 
     [0, 3, 6], [1, 4, 7], [2, 5, 8],  
@@ -118,4 +120,9 @@ const gameController = (function(){
     }
 })()
 
-
+function renderBoard(){
+    let board = gameBoard.displayBoard()
+    for(let i = 0; i < squares.length; i++){
+        squares[i].textContent = board[i]
+    }
+}
