@@ -1,4 +1,5 @@
 const squares = document.querySelectorAll(".square")
+const turnDisplay = document.querySelector("#next-turn")
 
 const winningCombos = [
     [0, 1, 2], [3, 4, 5], [6, 7, 8], 
@@ -125,4 +126,9 @@ function renderBoard(){
     for(let i = 0; i < squares.length; i++){
         squares[i].textContent = board[i]
     }
+}
+
+function renderTurn(){
+    let currentPlayer = gameController.getCurrentPlayer()
+    turnDisplay.textContent = `${currentPlayer.name}'s turn ( ${currentPlayer.marker} )`
 }
