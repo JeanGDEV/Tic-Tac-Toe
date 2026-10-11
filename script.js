@@ -177,3 +177,5 @@ restartBtn.addEventListener("click", () => {
     gameController.resetGame()
     renderAll()
 })
+
+renderAll()
