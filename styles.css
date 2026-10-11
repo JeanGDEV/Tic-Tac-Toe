@@ -40,8 +40,8 @@ h1 {
 .gameboard {
     --gap-container: 10px;
     display: grid;
-    grid-template-columns: repeat(3, 100px);
-    grid-template-rows: repeat(3, 100px);
+    grid-template-columns: repeat(3, 150px);
+    grid-template-rows: repeat(3, 150px);
     gap: var(--gap-container);
 }
 
