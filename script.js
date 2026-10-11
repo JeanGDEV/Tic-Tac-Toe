@@ -2,6 +2,10 @@ const squares = document.querySelectorAll(".square")
 const turnDisplay = document.querySelector("#next-turn")
 const winnerDisplay = document.querySelector("#show-winner")
 
+//BUTTONS
+const restartBtn = document.querySelector("#restart-btn")
+
+
 const winningCombos = [
     [0, 1, 2], [3, 4, 5], [6, 7, 8], 
     [0, 3, 6], [1, 4, 7], [2, 5, 8],  
@@ -165,4 +169,11 @@ squares.forEach((square) => {
             renderAll()
         }
     })
+})
+
+// Buttons Event Listeners
+
+restartBtn.addEventListener("click", () => {
+    gameController.resetGame()
+    renderAll()
 })
