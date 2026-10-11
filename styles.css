@@ -1,5 +1,5 @@
 :root {
-    --header-font: 2rem;
+    --header-font: 5rem;
     --color-white-body: white;
     --bg-color-body: #222;
     --gap-container: 30px;
@@ -20,6 +20,10 @@ body {
     font-family: sans-serif;
     background: var(--bg-color-body);
     color: var(--color-white-body);
+}
+
+h1 {
+    font-size: var(--header-font);
 }
 
 .container {
