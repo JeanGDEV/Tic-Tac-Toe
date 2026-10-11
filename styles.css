@@ -1,3 +1,11 @@
+:root {
+    --header-font: 2rem;
+    --color-white-body: white;
+    --bg-color-body: #222;
+    --gap-container: 30px;
+    --font-size-buttons: 1.4rem;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -10,25 +18,26 @@ body {
     justify-content: center;
     align-items: center;
     font-family: sans-serif;
-    background: #222;
-    color: white;
+    background: var(--bg-color-body);
+    color: var(--color-white-body);
 }
 
 .container {
     text-align: center;
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: var(--gap-container);
     border: 2px solid black;
 }
 
 
 
 .gameboard {
+    --gap-container: 10px;
     display: grid;
     grid-template-columns: repeat(3, 100px);
     grid-template-rows: repeat(3, 100px);
-    gap: 10px;
+    gap: var(--gap-container);
 }
 
 .square {
@@ -40,7 +49,7 @@ body {
 }
 
 button {
-    font-size: 1.4rem;
+    font-size: var(--font-size-buttons);
     padding: 5px 10px;
     width: 100px;
     border-radius: 4px;
@@ -49,9 +58,10 @@ button {
 }
 
 .game-info {
+    --gap-container: 20px;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: var(--gap-container);
 }
 
 #next-turn, #show-winner {
