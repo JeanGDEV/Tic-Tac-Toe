@@ -1,5 +1,6 @@
 const squares = document.querySelectorAll(".square")
 const turnDisplay = document.querySelector("#next-turn")
+const winnerDisplay = document.querySelector("#show-winner")
 
 const winningCombos = [
     [0, 1, 2], [3, 4, 5], [6, 7, 8], 
@@ -131,4 +132,20 @@ function renderBoard(){
 function renderTurn(){
     let currentPlayer = gameController.getCurrentPlayer()
     turnDisplay.textContent = `${currentPlayer.name}'s turn ( ${currentPlayer.marker} )`
+}
+
+function renderWinner(){
+    const isGameOver = gameController.getGameOver()
+    const winner = gameController.getWinner()
+    const currentPlayer = gameController.getCurrentPlayer()
+
+    if (isGameOver){
+        if(winner === null){
+            winnerDisplay.textContent = "Draw!"
+        } else if (winner === "X" || winner === "O"){
+            winnerDisplay.textContent = `${currentPlayer.name} wins!`
+        }
+    } else {
+        winnerDisplay.textContent = ""
+    }
 }
