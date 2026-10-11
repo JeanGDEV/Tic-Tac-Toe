@@ -52,6 +52,7 @@ body {
 }
 
 .square {
+    color: white;
     background: black;
     display: flex;
     justify-content: center;
